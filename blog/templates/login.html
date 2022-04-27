@@ -1,0 +1,36 @@
+{% load static %} {% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+</head>
+
+<body><br>
+    <img src="{% static 'blog.jpg' %}" alt="" width="48px" height="48px" style="margin-left: auto; margin-right: auto;">
+    <br><br>
+    <h1 id="heading">Sign In to Blog</h1>
+    <div id="centered">
+        <div id="newbord" class="container">
+            <form action="" method="POST">
+                <p>Username:</p>
+                <input type="text" name="username " class="inputbox" name="username" />
+                <p>Password:</p>
+                <input type="password" name="password" class="inputbox" /><br><br><br>
+                <input type="submit" value="Sign in " id="submit" /><br><br>
+            </form>
+        </div>
+        <br>
+        <div id="newbord">
+            <p>New to Blog?
+                <a href="register">Create an account.</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
