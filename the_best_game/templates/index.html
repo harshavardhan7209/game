@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Game"</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h2 class="better">Our page has the best games possible. <br>They have been made and refined since the last idk years, and is expected to become better and better.</h2>
+            <h2 style="color: white; text-align: right;">-"Ailbert Einstein"</h2>
+        </div>
+        <h1 style="color: white;">To Enter the game
+            <a href="login" style="text-decoration: none; color: blue;">Click this link</a>
+        </h1>
+        <div>
+            <a href="lottery"><img src="{% static 'lottery.jpg' %}" alt=""></a>
+        </div>
+        <h1 style="color: white; text-align: center;">Donations</h1>
+        <div id="newbord">
+            <h3>You can donate $$ to me by entering the following details:</h3>
+            <p>Name:</p>
+            <input type="text" name="name" class="inputbox">
+            <p>Class:</p> <input type="text" name="class" class="inputbox">
+            <p>Section:</p>
+            <input type="text" name="section" class="inputbox">
+            <p>Roll.No:</p>
+            <input type="text" name="rollno" class="inputbox"><br><br><br>
+            <input type="submit" value="Donate" id="submit"><br><br>
+        </div>
+    </div>
+</body>
+
+</html>

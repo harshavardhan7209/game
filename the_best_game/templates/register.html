@@ -1,0 +1,39 @@
+{% load static %} {% csrf_token %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+
+<body><br>
+
+    <img src="{% static 'blog.jpg' %}" alt="" width="48px" height="48px">
+    <h1 id="heading">Sign up to Blog</h1>
+    {% for message in messages %}
+    <h5>{{message}}</h5>
+    {% endfor %}
+    <div id="newbord">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <p>Username: </p>
+            <input type="text" class="inputbox" name="username" />
+            <p>Email Address: </p>
+            <input type="email" class="inputbox" name="email" />
+            <p>Password: </p>
+            <input type="password" class="inputbox" name="password" />
+            <p>Repeat Password: </p>
+            <input type="password" class="inputbox" name="password2" /><br><br>
+            <input type="submit" value="Sign up " id="submit" /><br><br><br>
+        </form>
+    </div><br>
+    <div id="newbord">
+        <p>Already have Account? <a href="login">Sign In.</a></p>
+    </div>
+</body>
+
+</html>
